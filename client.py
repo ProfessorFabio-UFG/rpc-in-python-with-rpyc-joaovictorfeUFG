@@ -5,10 +5,10 @@ class Client:
   conn = rpyc.connect(SERVER, PORT) # Connect to the server
   print ("Lista inicial:", conn.root.exposed_value())
   print("Adicionando valores aleatórios:")
-    for _ in range(5):
-        n = random.randint(1, 10)
-        conn.root.exposed_append(n)
-        print(f"Adicionado: {n}")
+  for _ in range(5):
+    n = random.randint(1, 10)
+    conn.root.exposed_append(n)
+    print(f"Adicionado: {n}")
 
   print("Lista atual:", conn.root.exposed_value())
   print("Soma:", conn.root.exposed_sum())
