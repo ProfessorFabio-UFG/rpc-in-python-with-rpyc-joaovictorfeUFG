@@ -1,5 +1,6 @@
 import rpyc
-from constRPYC import * #-
+import random
+from constRPYC import *
 
 class Client:
   conn = rpyc.connect(SERVER, PORT) # Connect to the server
